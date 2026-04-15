@@ -1,0 +1,20 @@
+├── data/
+│   └── raw/                 # raw downloaded stock data
+│   └── processed/           # cleaned data
+│
+├── notebooks/
+│   └── eda.ipynb            # exploratory data analysis
+│
+├── src/
+│   ├── data_loader.py
+│   ├── preprocessing.py
+│   ├── models.py
+│   ├── evaluation.py
+│
+├── results/
+│   ├── plots/
+│   └── metrics/
+│
+├── requirements.txt
+├── README.md
+└── main.py
