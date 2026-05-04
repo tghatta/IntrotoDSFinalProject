@@ -13,7 +13,7 @@ def train_rf(X_train, y_train):
   return model
 
 def train_xgb(X_train, y_train):
-  mdoel = XGBRegressor()
+  model = XGBRegressor()
   model.fit(X_train, y_train)
   return model
   

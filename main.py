@@ -8,7 +8,7 @@ df = download_stock_data("AAPL")
 df = preprocess_data(df)
 
 X = df[['Prev_Close', 'MA_5', 'MA_10']]
-Y = df['Close']
+y = df['Close']
 
 split = int(len(df)* 0.8)
 X_train, X_test = X[:split], X[split:]
