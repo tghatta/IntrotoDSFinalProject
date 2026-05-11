@@ -2,7 +2,7 @@ import pandas as pd
 from src.data_loader import download_stock_data
 from src.preprocessing import preprocess_data
 from src.models import train_linear, train_rf, train_xgb
-from src.evaluation import evaluate
+from src.evaluation import evaluate, plot_actual_vs_predicted
 
 df = download_stock_data("AAPL")
 df = preprocess_data(df)
@@ -24,3 +24,9 @@ for name, model in models.items():
   preds = model.predict(X_test)
   metrics = evaluate(y_test, preds)
   print(f"{name}: {metrics}")
+  plot_actual_vs_predicted(
+    y_test,
+    preds,
+    name,
+    output_path=f"plots/{name.lower()}_actual_vs_predicted.png"
+  )
